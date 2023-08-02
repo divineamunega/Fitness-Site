@@ -9,18 +9,21 @@
 	</head>
 	<body>
 		<!-- <nav></nav> -->
-
 		<div class="modal">
-			<p class="text">
-				Welcome to fitify <br />
-				Let's begin the adventure
-			</p>
-			<!-- <p class="text"></p> -->
-
-			<div class="name-form-box">
-				<label for="name">Enter Your Name:</label>
-				<input id="name" type="text" placeholder="Whatever" />
-			</div>
+			<button class="btn--close-modal">&times;</button>
+			<h2 class="modal__header">
+				Open your bank account <br />
+				in just <span class="highlight">5 minutes</span>
+			</h2>
+			<form class="modal__form">
+				<label>First Name</label>
+				<input type="text" />
+				<label>Last Name</label>
+				<input type="text" />
+				<label>Email Address</label>
+				<input type="email" />
+				<button class="btn">Next step &rarr;</button>
+			</form>
 		</div>
 		<div class="overlay"></div>
 	</body>
