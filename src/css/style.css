@@ -170,3 +170,29 @@ body {
     top: 50%;
     transform: translateY(-50%);
 }
+.why-choose-us h1{
+	color: var(--color-white);
+	font-size: 4rem;
+	font-family: var(--head-font);
+	line-height: 6rem;
+	padding: 4rem 0px 0px;
+}
+.why-choose-us p{
+	font-family: var(--text-font);
+	color: var(--color-white);
+	font-size: 1.4rem;
+	/* line-height: 4rem; */
+}
+.why-choose-us .row h1{
+	font-family: var(--head-font);
+	font-size: 2rem;
+	margin-top: -2rem;
+	line-height: 6rem;
+	color: var(--color-white);
+}
+.why-choose-us .row p{
+	font-family: var(--text-font);
+	font-size: 1.5rem;
+	color: var(--color-white);
+	/* line-height: 2rem; */
+}
