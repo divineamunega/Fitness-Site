@@ -5,15 +5,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link rel="stylesheet" href="./css/style.css" />
-		<script src="./js/script.js" type="module"></script>
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
 	</head>
 	<body>
 		<!-- <nav></nav> -->
-		<div class="modal">
+		<!-- <div class="modal">
 			<button class="btn--close-modal">&times;</button>
 			<h2 class="modal__header">
-				Open your bank account <br />
-				in just <span class="highlight">5 minutes</span>
+				Get Physically Fit <br />
+				in just <span class="highlight">3 Months</span>
 			</h2>
 			<form class="modal__form">
 				<label>First Name</label>
@@ -24,7 +24,55 @@
 				<input type="email" />
 				<button class="btn">Next step &rarr;</button>
 			</form>
+		</div> -->
+		<div class="overlay hidden"></div>
+
+		<nav class="navbar navbar-expand-md " style="background-color: black;">
+			<div class="container">
+				<a class="navbar-brand" href="#"><img src="/design/logo.png" width="40" alt=""> <span style="font-size: 2rem; color: white;">Fit4Life</span></a>
+				<button
+				class="navbar-toggler"
+				type="button"
+				data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+				>
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+					<a class="nav-link text-white text-center mx-2 fs-3 active" aria-current="page" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link text-white text-center mx-2 fs-3" href="#">Department</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link text-white text-center mx-2 fs-3" href="#">Doctors</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link text-white text-center mx-2 fs-3" href="#">Pages</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link text-white text-center mx-2 fs-3" href="#">Contact</a>
+					</li>
+				</ul>
+				</div>
+			</div>
+    	</nav>
+		
+		<div class="container-fluid landing-page">
+			<div class="container">
+				<span>With Patrick Potter</span>
+				<h1>Build Perfect Body Shape for Good and Healthy Life</h1>
+				<a href="#" class="py-4 px-4 ">BECOME A MEMBER</a>
+			</div>
 		</div>
-		<div class="overlay"></div>
+
+
+		<script src="./js/script.js"></script>
+		<script src="./js/bootstrap.bundle.min.js"></script>
 	</body>
 </html>
