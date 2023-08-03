@@ -13,81 +13,53 @@
 	</head>
 	<body>
 		<!-- <nav></nav> -->
-		<div class="modalFit">
-			<button class="btn--close-modal">&times;</button>
+		<div class="nav-open-button">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="modalFit hidden">
+			<!-- <button class="btn--close-modal">&times;</button> -->
 			<h2 class="modal__header">
 				Get Physically Fit <br />
 				in just <span class="highlight">3 Months</span>
 			</h2>
 			<form class="modal__form">
-				<label>First Name</label>
-				<input type="text" class="first-name-input" />
-				<label>Last Name</label>
-				<input type="text" class="last-name-input" />
-				<label>Email Address</label>
-				<input type="email" />
-				<button class="btn btn--submit-modal">Next step &rarr;</button>
+				<label>Name</label>
+				<input type="text" class="name-input" />
+				<label>Age</label>
+				<input type="number" class="age-input" />
+				<label>BMI</label>
+				<input type="number" class="bmi-input" />
+				<button class="btn btn--submit-modal">Continue &rarr;</button>
 			</form>
 		</div>
-		<div class="overlay"></div>
+		<div class="overlay hidden"></div>
 
 		<!-- NAVIGATION BAR -->
-		<nav class="navbar navbar-expand-md" style="background-color: black">
-			<div class="container">
-				<a class="navbar-brand" href="#"
-					><img src="/design/logo.png" width="40" alt="" />
-					<span style="font-size: 2rem; color: white">Fit4Life</span></a
-				>
-				<button
-					class="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a
-								class="nav-link text-white text-center mx-2 fs-3 active"
-								aria-current="page"
-								href="#"
-								>Home</a
-							>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white text-center mx-2 fs-3" href="#"
-								>Department</a
-							>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white text-center mx-2 fs-3" href="#"
-								>Doctors</a
-							>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white text-center mx-2 fs-3" href="#"
-								>Pages</a
-							>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white text-center mx-2 fs-3" href="#"
-								>Contact</a
-							>
-						</li>
-					</ul>
-				</div>
+		<nav class="nav hidden">
+			<div class="nav-box">
+				<ul>
+					<li class="link">
+						<a href="#">Home</a>
+					</li>
+					<li class="link">
+						<a href="#">Pages</a>
+					</li>
+					<li class="link">
+						<a href="#"> Descriptipon </a>
+					</li>
+					<li class="link">
+						<a href="#"> Workouts </a>
+					</li>
+				</ul>
 			</div>
 		</nav>
 
 		<!-- LANDING PAGE -->
 		<div class="container-fluid landing-page">
 			<div class="container">
-				<span>With Patrick Potter</span>
+				<span class="greeting">With Patrick Potter</span>
 				<h1 class="w-sm-75">
 					Build Perfect Body Shape for Good and Healthy Life
 				</h1>
@@ -106,48 +78,50 @@
 					</div>
 					<div class="col-md-6">
 						<div class="text">
-							<h1>ABOUT US</h1>
-							<p>
-								nappropriate behavior is often laughed off as “boys will be
-								boys,” women face higher conduct standards especially in the
-								workplace. That’s why it’s crucial that, as women, our behavior
-								on the job is beyond reproach.
-							</p>
-							<div class="row">
-								<div class="col-5">
-									<div class="about-sub p-4 rounded bg-white my-3">
-										<h2 style="color: #e16521" class="fs-1 mb-4">
-											<i class="bi bi-database"></i>
-										</h2>
-										<h2 class="text-dark fw-bold fs-1 my-3">$0.1 M</h2>
-										<p class="text-dark fw-bold fs-4 my-3">Total Donation</p>
+							<div class="">
+								<h1>ABOUT US</h1>
+								<p>
+									nappropriate behavior is often laughed off as “boys will be
+									boys,” women face higher conduct standards especially in the
+									workplace. That’s why it’s crucial that, as women, our
+									behavior on the job is beyond reproach.
+								</p>
+								<div class="row">
+									<div class="col-6">
+										<div class="about-sub p-4 rounded bg-white my-3">
+											<h2 style="color: #e16521" class="fs-1 mb-4">
+												<i class="bi bi-database"></i>
+											</h2>
+											<h2 class="text-dark fw-bold fs-1 my-3">$0.1 M</h2>
+											<p class="text-dark fw-bold fs-4 my-3">Total Donation</p>
+										</div>
 									</div>
-								</div>
-								<div class="col-5">
-									<div class="about-sub p-4 rounded bg-white my-3">
-										<h2 style="color: #e16521" class="fs-1 mb-4">
-											<i class="bi bi-journal-album"></i>
-										</h2>
-										<h2 class="text-dark fw-bold fs-1 my-3">$0.1 M</h2>
-										<p class="text-dark fw-bold fs-4 my-3">Total Donation</p>
+									<div class="col-6">
+										<div class="about-sub p-4 rounded bg-white my-3">
+											<h2 style="color: #e16521" class="fs-1 mb-4">
+												<i class="bi bi-journal-album"></i>
+											</h2>
+											<h2 class="text-dark fw-bold fs-1 my-3">$0.1 M</h2>
+											<p class="text-dark fw-bold fs-4 my-3">Total Donation</p>
+										</div>
 									</div>
-								</div>
-								<div class="col-5">
-									<div class="about-sub p-4 rounded bg-white my-3">
-										<h2 style="color: #e16521" class="fs-1 mb-4">
-											<i class="bi bi-people"></i>
-										</h2>
-										<h2 class="text-dark fw-bold fs-1 my-3">$0.1 M</h2>
-										<p class="text-dark fw-bold fs-4 my-3">Total Donation</p>
+									<div class="col-6">
+										<div class="about-sub p-4 rounded bg-white my-3">
+											<h2 style="color: #e16521" class="fs-1 mb-4">
+												<i class="bi bi-people"></i>
+											</h2>
+											<h2 class="text-dark fw-bold fs-1 my-3">$0.1 M</h2>
+											<p class="text-dark fw-bold fs-4 my-3">Total Donation</p>
+										</div>
 									</div>
-								</div>
-								<div class="col-5">
-									<div class="about-sub p-4 rounded bg-white my-3">
-										<h2 style="color: #e16521" class="fs-1 mb-4">
-											<i class="bi bi-people"></i>
-										</h2>
-										<h2 class="text-dark fw-bold fs-1 my-3">$0.1 M</h2>
-										<p class="text-dark fw-bold fs-4 my-3">Total Donation</p>
+									<div class="col-6">
+										<div class="about-sub p-4 rounded bg-white my-3">
+											<h2 style="color: #e16521" class="fs-1 mb-4">
+												<i class="bi bi-people"></i>
+											</h2>
+											<h2 class="text-dark fw-bold fs-1 my-3">$0.1 M</h2>
+											<p class="text-dark fw-bold fs-4 my-3">Total Donation</p>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -166,8 +140,8 @@
 					eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				</p>
 				<div class="row">
-					<div class="col-lg-4">
-						<div class="categories-post">
+					<div class="col-lg-4 col-md-6 mx-auto">
+						<div class="categories-post my-4">
 							<img src="/design/category.webp" class="w-100" alt="" />
 							<div class="categories-details">
 								<div class="categories-text">
@@ -192,8 +166,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4">
-						<div class="categories-post">
+					<div class="col-lg-4 col-md-6 mx-auto">
+						<div class="categories-post my-4">
 							<img src="/design/diet-category.jpg" class="w-100" alt="" />
 							<div class="categories-details">
 								<div class="categories-text">
@@ -204,8 +178,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4">
-						<div class="categories-post">
+					<div class="col-lg-4 col-md-6 mx-auto">
+						<div class="categories-post my-4">
 							<img src="/design/resources-category.jpg" class="w-100" alt="" />
 							<div class="categories-details">
 								<div class="categories-text">
