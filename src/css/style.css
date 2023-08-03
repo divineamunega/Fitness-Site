@@ -2,7 +2,7 @@
 :root {
 	--color-white: #fff;
 	--color-red: #ff1313;
-	--color-primary: #5ec576;
+	/* --color-primary: #5ec576;
 	--color-secondary: #ffcb03;
 	--color-tertiary: #ff585f;
 	--color-primary-darker: #4bbb7d;
@@ -10,8 +10,8 @@
 	--color-tertiary-darker: #fd424b;
 	--color-primary-opacity: #5ec5763a;
 	--color-secondary-opacity: #ffcd0331;
-	--color-tertiary-opacity: #ff58602d;
-	--gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+	--color-tertiary-opacity: #ff58602d; */
+	--gradient-primary: linear-gradient(to right, #e16521, #e4381C);
 	--gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
 	/* scroll-behavior: smooth; */
 	--head-font: 'Oswald', sans-serif;
@@ -19,7 +19,7 @@
 	--sub-font: 'Teko', sans-serif;
 }
 
-* {
+*, *::before, *::after {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -30,11 +30,17 @@ html {
 	box-sizing: border-box;
 }
 body {
-	font-family: "Poppins", sans-serif;
-	font-weight: 300;
-	color: #444;
+	color: #444 !important;
 	line-height: 1.9;
 	background-color: #f3f3f3;
+}
+h1{
+	font-family: var(--head-font);
+	color: var(--color-white);
+}
+p{
+	font-family: var(--text-font);
+	color: var(--color-white);
 }
 .highlight {
 	position: relative;
@@ -125,6 +131,8 @@ body {
 .navbar{
 	height: 10vh;
 }
+
+/* LANDING PAGE */
 .landing-page{
 	width: 100%;
 	height: 90vh;
@@ -138,12 +146,10 @@ body {
 }
 .landing-page h1{
 	font-size: 5rem;
-	color: var(--color-white);
 	width: 35%;
-	font-family: var(--head-font);
 }
 .landing-page a{
-	background-color: var(--color-red);
+	background: var(--gradient-primary);
 	color: var(--color-white);
 	display: inline-block;
 	margin: 3rem 0rem;
@@ -170,29 +176,77 @@ body {
     top: 50%;
     transform: translateY(-50%);
 }
-.why-choose-us h1{
-	color: var(--color-white);
+
+/* ABOUT US */
+.about-us{
+	background-color:#151515;
+}
+.about-us .img{
+	background-image: url(/design/about-us2.webp);
+	background-position: center;
+	background-size: cover;
+	height: 60rem;
+}
+.about-us .text{
+	padding: 100px;
+	height: 60rem;
+}
+.about-us .text h1{
+	line-height: 60px;
 	font-size: 4rem;
-	font-family: var(--head-font);
+}
+.about-us .text p{
+	font-size: 1.4rem;
+	line-height: 20px;
+}
+.about-us .text .about-sub{
+	border: 1px solid #e16521;
+}
+.about-sub .text .about-sub:hover{
+	transform: scale(1.5);
+}
+.about-us .text .about-sub p:first-child{
+	font-family: var(--sub-font);
+}
+
+
+
+
+/* WHY CHOOSE US */
+.why-choose-us h1{
+	font-size: 4rem;
 	line-height: 6rem;
 	padding: 4rem 0px 0px;
 }
 .why-choose-us p{
-	font-family: var(--text-font);
-	color: var(--color-white);
 	font-size: 1.4rem;
 	/* line-height: 4rem; */
 }
 .why-choose-us .row h1{
-	font-family: var(--head-font);
 	font-size: 2rem;
 	margin-top: -2rem;
 	line-height: 6rem;
-	color: var(--color-white);
 }
 .why-choose-us .row p{
-	font-family: var(--text-font);
 	font-size: 1.5rem;
-	color: var(--color-white);
 	/* line-height: 2rem; */
 }
+
+@media only  screen and (max-width: 576px) {
+	.about-us .text{
+		padding: 10px;
+	}
+	.landing-page h1{
+		width: 90%;
+	}
+}
+
+@media only  screen and (max-width: 991px) {
+	.about-us .text{
+		padding: 70px 50px;
+	}
+	.landing-page h1{
+		width: 70%;
+	}
+}
+
