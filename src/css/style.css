@@ -148,10 +148,11 @@ p {
 
 /* NAVBAR */
 .nav {
-	height: 100%;
+	height: 50%;
 	position: fixed;
 	background-image: var(--gradient-primary);
-	width: 100%;
+	right: 0;
+	width: 20%;
 	z-index: 999;
 	transition: 1s;
 }
@@ -182,6 +183,9 @@ p {
 .nav-box li a {
 	color: var(--color-white);
 }
+.nav-box ul li a:hover{
+	color: black;
+}
 
 .nav-open-button {
 	width: 50px;
@@ -200,10 +204,10 @@ p {
 }
 
 .nav-open-button div {
-	width: 70%;
+	width: 30px;
 	height: 3px;
 	background-color: black;
-	margin: 0.3rem 0;
+	margin: 3px 0;
 	transition: 0.5s;
 }
 
@@ -224,7 +228,7 @@ p {
 /* LANDING PAGE */
 .landing-page {
 	width: 100%;
-	height: 90vh;
+	height: 100vh;
 	background-image: url(/design/landing-img.webp);
 	background-size: cover;
 	background-position: center;
@@ -408,6 +412,11 @@ p {
 		width: 120%;
 		margin-left: -30px;
 	}
+	.nav{
+		width: 100%;
+		height: 100%;
+		font-size: 3rem;
+	}
 }
 
 @media only screen and (max-width: 991px) {
@@ -417,4 +426,13 @@ p {
 	.landing-page h1 {
 		width: 70%;
 	}
+}
+
+
+.back2Top{
+	position: fixed;
+	bottom: 5%;
+	right: 5%;
+	font-size: 4rem;
+	cursor: pointer;
 }

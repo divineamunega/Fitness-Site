@@ -115,3 +115,22 @@ class App {
 }
 
 const app = new App();
+
+const back2Top = document.querySelector(".back2Top");
+back2Top.addEventListener("click", () => {
+    window.scrollTo(0, 0);
+});
+const header = document.querySelector(`.landing-page`);
+
+const observer = new IntersectionObserver(([observer]) => {
+// const [obs] = observer;
+
+if (observer.isIntersecting) {
+    back2Top.classList.add(`hidden`);
+} else {
+    back2Top.classList.remove(`hidden`);
+}
+});
+observer.observe(header);
+
+console.log(observer);
