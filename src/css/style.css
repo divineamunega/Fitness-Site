@@ -2,18 +2,9 @@
 :root {
 	--color-white: #fff;
 	--color-red: #ff1313;
-	/* --color-primary: #5ec576;
-	--color-secondary: #ffcb03;
-	--color-tertiary: #ff585f;
-	--color-primary-darker: #4bbb7d;
-	--color-secondary-darker: #ffbb00;
-	--color-tertiary-darker: #fd424b;
-	--color-primary-opacity: #5ec5763a;
-	--color-secondary-opacity: #ffcd0331;
-	--color-tertiary-opacity: #ff58602d; */
 	--gradient-primary: linear-gradient(
 		to right,
-		rgb(225, 101, 33),
+		#e16521,
 		rgb(228, 56, 28)
 	);
 	--gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
@@ -138,13 +129,10 @@ p {
 .show-modal {
 	font-size: 2rem;
 	font-weight: 600;
-	padding: 1.75rem 3.5rem;
-	margin: 5rem 2rem;
 	border: none;
-	background-color: #fff;
-	color: #444;
-	border-radius: 10rem;
+	color: var(--color-white);
 	cursor: pointer;
+	background: transparent;
 }
 
 .close-modal {
