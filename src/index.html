@@ -5,15 +5,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link rel="stylesheet" href="./css/style.css" />
-		<script src="./js/script.js" type="module"></script>
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 	</head>
 	<body>
 		<!-- <nav></nav> -->
-		<div class="modal">
+		<!-- <div class="modal">
 			<button class="btn--close-modal">&times;</button>
 			<h2 class="modal__header">
-				Open your bank account <br />
-				in just <span class="highlight">5 minutes</span>
+				Get Physically Fit <br />
+				in just <span class="highlight">3 Months</span>
 			</h2>
 			<form class="modal__form">
 				<label>First Name</label>
@@ -24,7 +25,288 @@
 				<input type="email" />
 				<button class="btn">Next step &rarr;</button>
 			</form>
+		</div> -->
+		<div class="overlay hidden"></div>
+
+		<!-- NAVIGATION BAR -->
+		<nav class="navbar navbar-expand-md " style="background-color: black;">
+			<div class="container">
+				<a class="navbar-brand" href="#"><img src="/design/logo.png" width="40" alt=""> <span style="font-size: 2rem; color: white;">Fit4Life</span></a>
+				<button
+				class="navbar-toggler"
+				type="button"
+				data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+				>
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+					<a class="nav-link text-white text-center mx-2 fs-3 active" aria-current="page" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link text-white text-center mx-2 fs-3" href="#">Department</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link text-white text-center mx-2 fs-3" href="#">Doctors</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link text-white text-center mx-2 fs-3" href="#">Pages</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link text-white text-center mx-2 fs-3" href="#">Contact</a>
+					</li>
+				</ul>
+				</div>
+			</div>
+    	</nav>
+		
+		<!-- LANDING PAGE -->
+		<div class="container-fluid landing-page">
+			<div class="container">
+				<span>With Patrick Potter</span>
+				<h1 class="w-sm-75">Build Perfect Body Shape for Good and Healthy Life</h1>
+				<a href="#" class="py-4 px-4 ">BECOME A MEMBER</a>
+			</div>
 		</div>
-		<div class="overlay"></div>
+
+
+		<!-- ABOUT US -->
+		<div class="container-fluid about-us py-5">
+			<div class="col-lg-8 mx-auto col-12">
+				<div class="row">
+					<div class="col-md-6 ">
+						<div class="img">
+							<!-- <img src="/design/about-us.webp" height="500" alt=""> -->
+						</div>
+					</div>
+					<div class="col-md-6 ">
+						<div class="text">
+							<h1>ABOUT US</h1>
+							<p>nappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.</p>
+							<div class="row">
+								<div class="col-5">
+									<div class="about-sub p-4 rounded bg-white my-3">
+										<h2 style="color: #e16521;" class="fs-1 mb-4"><i class="bi bi-database"></i></h2>
+										<h2 class="text-dark fw-bold fs-1 my-3">$0.1 M</h2>
+										<p class="text-dark fw-bold fs-4 my-3">Total Donation</p>
+									</div>
+								</div>
+								<div class="col-5">
+									<div class="about-sub p-4 rounded bg-white my-3">
+										<h2 style="color: #e16521;" class="fs-1 mb-4"><i class="bi bi-journal-album"></i></h2>
+										<h2 class="text-dark fw-bold fs-1 my-3">$0.1 M</h2>
+										<p class="text-dark fw-bold fs-4 my-3">Total Donation</p>
+									</div>
+								</div>
+								<div class="col-5">
+									<div class="about-sub p-4 rounded bg-white my-3">
+										<h2 style="color: #e16521;" class="fs-1 mb-4"><i class="bi bi-people"></i></h2>
+										<h2 class="text-dark fw-bold fs-1 my-3">$0.1 M</h2>
+										<p class="text-dark fw-bold fs-4 my-3">Total Donation</p>
+									</div>
+								</div>
+								<div class="col-5">
+									<div class="about-sub p-4 rounded bg-white my-3">
+										<h2 style="color: #e16521;" class="fs-1 mb-4"><i class="bi bi-people"></i></h2>
+										<h2 class="text-dark fw-bold fs-1 my-3">$0.1 M</h2>
+										<p class="text-dark fw-bold fs-4 my-3">Total Donation</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- PROCEDURE CATEGORY -->
+		<div class="container-fluid category" style="background-color: #151515;">
+			<div class="container p-5">
+				<h1 class="text-center">PROCEDURE CATEGORY</h1>
+				<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="categories-post">
+							<img src="/design/category.webp" class="w-100" alt="">
+							<div class="categories-details">
+								<div class="categories-text">
+									<div class="border-line"></div>
+									 <button class="show-modal">Show modal 1</button>
+									 <div class="modal hidden">
+									<button class="close-modal">&times;</button>
+									<h1>I'm a modal window 😍</h1>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+										veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+										commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+										velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+										occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+										mollit anim id est laborum.
+									</p>
+									</div>
+									<div class="border-line"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="categories-post">
+							<img src="/design/diet-category.jpg" class="w-100" alt="">
+							<div class="categories-details">
+								<div class="categories-text">
+									<div class="border-line"></div>
+									<a href=""><h5>Diet Plan</h5></a>
+									<div class="border-line"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="categories-post">
+							<img src="/design/resources-category.jpg" class="w-100" alt="">
+							<div class="categories-details">
+								<div class="categories-text">
+									<div class="border-line"></div>
+									<a href=""><h5>Resources</h5></a>
+									<div class="border-line"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- TESTIMONIALS -->
+		<div class="container-fluid testimonials p-5 overflow-hidden">
+			<h1 class="text-center mb-2 text-white my-5">TESTIMONIALS</h1>
+			<p class="text-center fs-3 fw-bold text-white mb-5">What Our Happy Clients Says...</p>
+			<div class="container my-5">
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="testimony p-sm-2 p-md-5" style="background-color: #e1e1e1;">
+							<div class="d-flex">
+								<i class="fa fa-star fs-5 mx-1" style="color: #0e5fb2;" aria-hidden="true"></i>
+								<i class="fa fa-star fs-5 mx-1" style="color: #0e5fb2;" aria-hidden="true"></i>
+								<i class="fa fa-star fs-5 mx-1" style="color: #0e5fb2;" aria-hidden="true"></i>
+								<i class="fa fa-star fs-5 mx-1" style="color: #0e5fb2;" aria-hidden="true"></i>
+								<i class="fa fa-star fs-5 mx-1" style="color: #0e5fb2;" aria-hidden="true"></i>
+							</div>
+							<p class="mt-3 text-dark fs-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum enim perferendis ducimus atque et ab, temporibus mollitia doloribus fugiat quaerat? Lorem ipsum dolor dolorum consectetur quo animi neque itaque quis quaerat ipsam?</p>
+							<div class="d-flex align-items-center mt-4">
+								<div class="client" >
+									<img src="/design/about-us.webp" class="img-fluid" alt="" style="width: 80px; height: 80px; border-radius: 50%;">
+								</div>
+								<div class="d-block ms-3">
+									<p class="fw-bold mb-1 text-dark fs-2">Mhizta Orlah</p>
+									<p class="text-dark fs-4">Los Angeles - USA</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<div class="testimony mt-sm-5 p-sm-2 p-md-5" style="background-color: #e1e1e1;">
+							<div class="d-flex">
+								<i class="fa fa-star fs-5 mx-1" style="color: #0e5fb2;" aria-hidden="true"></i>
+								<i class="fa fa-star fs-5 mx-1" style="color: #0e5fb2;" aria-hidden="true"></i>
+								<i class="fa fa-star fs-5 mx-1" style="color: #0e5fb2;" aria-hidden="true"></i>
+								<i class="fa fa-star fs-5 mx-1" style="color: #0e5fb2;" aria-hidden="true"></i>
+								<i class="fa fa-star fs-5 mx-1" style="color: #0e5fb2;" aria-hidden="true"></i>
+							</div>
+							<p class="mt-3 text-dark fs-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum enim perferendis ducimus atque et ab, temporibus mollitia doloribus fugiat quaerat? Lorem ipsum dolor dolorum consectetur quo animi neque itaque quis quaerat ipsam?</p>
+							<div class="d-flex align-items-center">
+								<div class="client" style="width: 80px; height: 80px; border-radius: 50%; background-color: red;">
+									<img src="./static/images/team/team-01.jpg" class="img-fluid" alt="">
+								</div>
+								<div class="d-block ms-3">
+									<p class="fw-bold mb-1 text-dark fs-2">Mhizta Orlah</p>
+									<p class="text-dark fs-4">Los Angeles - USA</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+    	</div>
+
+		<!-- WHY PEOPLE CHOOSE US -->
+		<div class="container-fluid why-choose-us" style="background-color: #151515;">
+			<div class="container">
+				<h1>Why People Choose Us</h1>
+				<p>Our sport experts and latest sports equipment are the winning combination.</p>
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-12">
+						<div class="px-4 py-5">
+							<img src="/design/icons/support.webp" alt="">
+							<h1>SUPPORT 24/24</h1>
+							<p>One of the best ways to make a great vacation quickly horrible is to choose the wrong accommodations for your trip.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-12">
+						<div class="px-4 py-5">
+							<img src="/design/icons/trainer.webp" alt="">
+							<h1>OUR TRAINERS</h1>
+							<p>If you are an infrequent traveler you may need some tips to keep the wife happy while you are jet setting around the globe.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-12">
+						<div class="px-4 py-5">
+							<img src="/design/icons/sessions.webp" alt="">
+							<h1>PERSONALIZED SESSIONS</h1>
+							<p>To succeed at any endeavor, you must stay the course…no matter what the cost! Here are some surefire tips to help you on your journey.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-12">
+						<div class="px-4 py-5">
+							<img src="/design/icons/equipment.webp" alt="">
+							<h1>OUR EQUIPMENT</h1>
+							<p>To succeed at any endeavor, you must stay the course…no matter what the cost! Here are some surefire tips to help you on your journey.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-12">
+						<div class="px-4 py-5">
+							<img src="/design/icons/classes.webp" alt="">
+							<h1>CLASSES DAILY</h1>
+							<p>To succeed at any endeavor, you must stay the course…no matter what the cost! Here are some surefire tips to help you on your journey.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-12">
+						<div class="px-4 py-5">
+							<img src="/design/icons/health.webp" alt="">
+							<h1>FOCUS ON YOUR HEALTH</h1>
+							<p>To succeed at any endeavor, you must stay the course…no matter what the cost! Here are some surefire tips to help you on your journey.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="">
+							<p>OUR COMAPNY</p>
+							<ul>
+								<li>About Us</li>
+								<li>Category</li>
+								<li>Our Relevance</li>
+								<li>Contact Us</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="./js/script.js"></script>
+		<script src="./js/bootstrap.bundle.min.js"></script>
 	</body>
 </html>
