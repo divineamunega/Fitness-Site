@@ -132,5 +132,3 @@ if (observer.isIntersecting) {
 }
 });
 observer.observe(header);
-
-console.log(observer);
