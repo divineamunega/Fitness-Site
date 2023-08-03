@@ -1,0 +1,28 @@
+{
+	"diets": [
+		{
+			"bmi_range": {
+				"from": 0,
+				"to": 18.5
+			},
+			"diet": "High-calorie foods",
+			"image_url": ""
+		},
+		{
+			"bmi_range": {
+				"from": 18.5,
+				"to": 24.9
+			},
+			"diet": "Balanced diet",
+			"image_url": ""
+		},
+		{
+			"bmi_range": {
+				"from": 24.9,
+				"to": 29.9
+			},
+			"diet": "Low-fat foods",
+			"image_url": ""
+		}
+	]
+}
