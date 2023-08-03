@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Oswald:wght@600&family=Teko:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Oswald:wght@600&family=Teko:wght@300&display=swap");
 :root {
 	--color-white: #fff;
 	--color-red: #ff1313;
@@ -11,15 +11,21 @@
 	--color-primary-opacity: #5ec5763a;
 	--color-secondary-opacity: #ffcd0331;
 	--color-tertiary-opacity: #ff58602d; */
-	--gradient-primary: linear-gradient(to right, rgb(225, 101, 33), rgb(228, 56, 28));
+	--gradient-primary: linear-gradient(
+		to right,
+		rgb(225, 101, 33),
+		rgb(228, 56, 28)
+	);
 	--gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
 	/* scroll-behavior: smooth; */
-	--head-font: 'Oswald', sans-serif;
-	--text-font: 'Nunito Sans', sans-serif;
-	--sub-font: 'Teko', sans-serif;
+	--head-font: "Oswald", sans-serif;
+	--text-font: "Nunito Sans", sans-serif;
+	--sub-font: "Teko", sans-serif;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -29,16 +35,17 @@ html {
 	font-size: 62.5%;
 	box-sizing: border-box;
 }
+
 body {
 	color: #444 !important;
 	line-height: 1.9;
 	background-color: #f3f3f3;
 }
-h1{
+h1 {
 	font-family: var(--head-font);
 	color: var(--color-white);
 }
-p{
+p {
 	font-family: var(--text-font);
 	color: var(--color-white);
 }
@@ -61,7 +68,7 @@ p{
 }
 
 /* MODAL WINDOW */
-.modal {
+.modalFit {
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -72,6 +79,7 @@ p{
 	box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
 	z-index: 1000;
 	transition: all 0.5s;
+	z-index: 1002;
 }
 .overlay {
 	position: fixed;
@@ -81,7 +89,7 @@ p{
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
 	backdrop-filter: blur(4px);
-	z-index: 100;
+	z-index: 1001;
 	transition: all 0.5s;
 }
 .modal__header {
@@ -95,6 +103,7 @@ p{
 	grid-template-columns: 1fr 2fr;
 	align-items: center;
 	gap: 2.5rem;
+	/* background-color: var(--color-white); */
 }
 .modal__form label {
 	font-size: 1.7rem;
@@ -127,35 +136,104 @@ p{
 	opacity: 0;
 }
 .show-modal {
-  font-size: 2rem;
-  font-weight: 600;
-  padding: 1.75rem 3.5rem;
-  margin: 5rem 2rem;
-  border: none;
-  background-color: #fff;
-  color: #444;
-  border-radius: 10rem;
-  cursor: pointer;
+	font-size: 2rem;
+	font-weight: 600;
+	padding: 1.75rem 3.5rem;
+	margin: 5rem 2rem;
+	border: none;
+	background-color: #fff;
+	color: #444;
+	border-radius: 10rem;
+	cursor: pointer;
 }
 
 .close-modal {
-  position: absolute;
-  top: 1.2rem;
-  right: 2rem;
-  font-size: 5rem;
-  color: #333;
-  cursor: pointer;
-  border: none;
-  background: none;
+	position: absolute;
+	top: 1.2rem;
+	right: 2rem;
+	font-size: 5rem;
+	color: #333;
+	cursor: pointer;
+	border: none;
+	background: none;
 }
 
 /* NAVBAR */
-.navbar{
-	height: 10vh;
+.nav {
+	height: 100%;
+	position: fixed;
+	background-image: var(--gradient-primary);
+	width: 100%;
+	z-index: 999;
+}
+
+.nav-box {
+	width: 40%;
+	height: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav-box ul {
+	display: block;
+	list-style: none;
+}
+.nav-box li {
+	/* width: 2rem; */
+	font-size: 3rem;
+	margin-bottom: 4rem;
+	font-weight: 700;
+	font-family: var(--text-font);
+}
+.nav-box li a {
+	color: var(--color-white);
+}
+
+.nav-open-button {
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	background-color: white;
+	right: 50px;
+	top: 50px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	z-index: 1000;
+}
+
+.nav-open-button div {
+	width: 70%;
+	height: 3px;
+	background-color: black;
+	margin: 0.3rem 0;
+	transition: 0.5s;
+}
+
+.nav-open-button.close div:nth-child(1) {
+	transform: translateY(9px) rotate(45deg);
+}
+
+.nav-open-button.close div:nth-child(2) {
+	/* visibility: hidden; */
+	/* display: none; */
+	opacity: 0;
+}
+
+.nav-open-button.close div:nth-child(3) {
+	transform: translateY(-9px) rotate(-45deg);
 }
 
 /* LANDING PAGE */
-.landing-page{
+.landing-page {
 	width: 100%;
 	height: 90vh;
 	background-image: url(/design/landing-img.webp);
@@ -167,182 +245,187 @@ p{
 	align-items: center;
 	background-attachment: fixed;
 }
-.landing-page h1{
+.landing-page h1 {
 	font-size: 8rem;
 	width: 50%;
 }
-.landing-page a{
+.landing-page a {
 	background: var(--gradient-primary);
 	color: var(--color-white);
 	display: inline-block;
 	margin: 3rem 0rem;
 	font-family: var(--text-font);
 }
-.landing-page span{
-    font-size: 24px;
-    font-family: var(--sub-font);
-    margin-bottom: 35px;
-    color: #f04e3c;
-    display: inline-block;
-    position: relative;
-    padding-left: 100px;
-    letter-spacing: 0.05em;
+.landing-page span {
+	font-size: 24px;
+	font-family: var(--sub-font);
+	margin-bottom: 35px;
+	color: #f04e3c;
+	display: inline-block;
+	position: relative;
+	padding-left: 100px;
+	letter-spacing: 0.05em;
 }
-.landing-page span::before{
-    position: absolute;
-    content: "";
-    width: 70px;
-    height: 2px;
-    background: #f04e3c;
-    top: 0;
-    left: 0px;
-    top: 50%;
-    transform: translateY(-50%);
+.landing-page span::before {
+	position: absolute;
+	content: "";
+	width: 70px;
+	height: 2px;
+	background: #f04e3c;
+	top: 0;
+	left: 0px;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 /* ABOUT US */
-.about-us{
-	background-color:#151515;
+.about-us {
+	background-color: #151515;
 }
-.about-us .img{
+.about-us .img {
 	background-image: url(/design/about-us2.webp);
 	background-position: center;
 	background-size: cover;
 	height: 60rem;
 }
-.about-us .about-sub h2{
+.about-us .about-sub h2 {
 	font-family: var(--head-font);
 }
-.about-us .text{
-	padding: 80px;
+.about-us .text {
 	height: 60rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.about-us .text h1{
+.about-us .text h1 {
 	line-height: 60px;
 	font-size: 4rem;
 }
-.about-us .text p{
+.about-us .text p {
 	font-size: 1.4rem;
 	line-height: 20px;
 }
-.about-us .text .about-sub{
+.about-us .text .about-sub {
 	border: 1px solid #e16521;
 }
-.about-sub .text .about-sub:hover{
+.about-sub .text .about-sub:hover {
 	transform: scale(1.5);
 }
-.about-us .text .about-sub p:first-child{
+.about-us .text .about-sub p:first-child {
 	font-family: var(--sub-font);
 }
 
-.category h1{
+.category h1 {
 	font-size: 4rem;
 }
-.category .categories-post{
+.category .categories-post {
 	position: relative;
-    text-align: center;
-    cursor: pointer;
+	text-align: center;
+	cursor: pointer;
 }
 .category .categories_post img {
-    max-width: 130%;
+	max-width: 130%;
 	/* vertical-align: middle; */
 	border-style: none;
 	/* overflow-clip-m	argin: content-box; */
 	/* overflow: clip; */
 }
 .category .categories-post .categories-details {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(34, 34, 34, 0.8);
-    transition: all 0.3s linear 0s;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	right: 20px;
+	bottom: 20px;
+	color: rgb(255, 255, 255);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(34, 34, 34, 0.8);
+	transition: all 0.3s linear 0s;
 	opacity: 0;
 }
 .category .categories-post .categories-details .border-line {
-    width: 100%;
-    height: 1px;
-    margin: 10px 0px;
-    background: rgb(255, 255, 255);
+	width: 100%;
+	height: 1px;
+	margin: 10px 0px;
+	background: rgb(255, 255, 255);
 }
 .category .categories-post .categories-details a {
-    color: #e16521;
-    background-color: transparent;
+	color: #e16521;
+	background-color: transparent;
 	transition: all 0.3s ease-in-out 0s;
 }
 .categories-post .categories-details h5 {
-    margin-bottom: 0px;
-    font-size: 1.8rem;
-    line-height: 26px;
-    text-transform: uppercase;
-    color: #fff;
-    position: relative;
+	margin-bottom: 0px;
+	font-size: 1.8rem;
+	line-height: 26px;
+	text-transform: uppercase;
+	color: #fff;
+	position: relative;
 }
 .category .categories-post:hover .categories-details {
 	opacity: 1;
-	background: rgba(34, 34, 34, 0.5); 
+	background: rgba(34, 34, 34, 0.5);
 }
 
-
 /* WHY CHOOSE US */
-.why-choose-us h1{
+.why-choose-us h1 {
 	font-size: 4rem;
 	line-height: 6rem;
 	padding: 4rem 0px 0px;
 }
-.why-choose-us p{
+.why-choose-us p {
 	font-size: 1.4rem;
 	/* line-height: 4rem; */
 }
-.why-choose-us .row h1{
+.why-choose-us .row h1 {
 	font-size: 2rem;
 	margin-top: -2rem;
 	line-height: 6rem;
 }
-.why-choose-us .row p{
+.why-choose-us .row p {
 	font-size: 1.5rem;
 	/* line-height: 2rem; */
 }
 
 /* TESTIMONIALS */
-.testimonials{
-    background-image: linear-gradient(30deg, rgba(225, 101, 33, 0.3), rgba(228, 56, 28, 0.3)), url(/design/landing-img.webp);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition:  0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+.testimonials {
+	background-image: linear-gradient(
+			30deg,
+			rgba(225, 101, 33, 0.3),
+			rgba(228, 56, 28, 0.3)
+		),
+		url(/design/landing-img.webp);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
 	background-attachment: fixed;
 }
-.testimonials h1{
+.testimonials h1 {
 	font-size: 4rem;
 }
 
-@media only  screen and (max-width: 576px) {
-	.about-us .text{
-		padding: 10px;
+@media only screen and (max-width: 576px) {
+	html {
+		font-size: 30% !important;
 	}
-	.landing-page h1{
-		width: 90%;
+	.landing-page h1 {
+		width: 100%;
 	}
-	.testimony{
-        padding: 15px !important;
-        margin-top: 30px;
-        width: 120%;
-        margin-left: -30px;
-    }
+	.testimony {
+		padding: 15px !important;
+		margin-top: 30px;
+		width: 120%;
+		margin-left: -30px;
+	}
 }
 
-@media only  screen and (max-width: 991px) {
-	.about-us .text{
-		padding: 70px 50px;
+@media only screen and (max-width: 991px) {
+	html {
+		font-size: 50%;
 	}
-	.landing-page h1{
+	.landing-page h1 {
 		width: 70%;
 	}
 }
-
