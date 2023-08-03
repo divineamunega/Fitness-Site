@@ -11,7 +11,7 @@
 	--color-primary-opacity: #5ec5763a;
 	--color-secondary-opacity: #ffcd0331;
 	--color-tertiary-opacity: #ff58602d; */
-	--gradient-primary: linear-gradient(to right, #e16521, #e4381C);
+	--gradient-primary: linear-gradient(to right, rgb(225, 101, 33), rgb(228, 56, 28));
 	--gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
 	/* scroll-behavior: smooth; */
 	--head-font: 'Oswald', sans-serif;
@@ -126,6 +126,28 @@ p{
 	visibility: hidden;
 	opacity: 0;
 }
+.show-modal {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
 
 /* NAVBAR */
 .navbar{
@@ -143,10 +165,11 @@ p{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-attachment: fixed;
 }
 .landing-page h1{
-	font-size: 5rem;
-	width: 35%;
+	font-size: 8rem;
+	width: 50%;
 }
 .landing-page a{
 	background: var(--gradient-primary);
@@ -187,8 +210,11 @@ p{
 	background-size: cover;
 	height: 60rem;
 }
+.about-us .about-sub h2{
+	font-family: var(--head-font);
+}
 .about-us .text{
-	padding: 100px;
+	padding: 80px;
 	height: 60rem;
 }
 .about-us .text h1{
@@ -283,6 +309,19 @@ p{
 	/* line-height: 2rem; */
 }
 
+/* TESTIMONIALS */
+.testimonials{
+    background-image: linear-gradient(30deg, rgba(225, 101, 33, 0.3), rgba(228, 56, 28, 0.3)), url(/design/landing-img.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition:  0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+	background-attachment: fixed;
+}
+.testimonials h1{
+	font-size: 4rem;
+}
+
 @media only  screen and (max-width: 576px) {
 	.about-us .text{
 		padding: 10px;
@@ -290,6 +329,12 @@ p{
 	.landing-page h1{
 		width: 90%;
 	}
+	.testimony{
+        padding: 15px !important;
+        margin-top: 30px;
+        width: 120%;
+        margin-left: -30px;
+    }
 }
 
 @media only  screen and (max-width: 991px) {
