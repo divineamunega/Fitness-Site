@@ -31,8 +31,7 @@ class App {
 		// localStorage.setItem("hasModalOpen", JSON.stringify(hasModalOpen));
 
 		btnsSubmit.addEventListener(`click`, this.#submitDetails.bind(this));
-		if (!localStorage.getItem("hasModalOpen")) {
-			localStorage.setItem("hasModalOpen", JSON.stringify(true));
+		if (!localStorage.getItem(`account`)) {
 			this.#openModal();
 		} else {
 			// Loading the workouts from local storage
