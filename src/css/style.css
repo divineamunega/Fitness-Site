@@ -165,6 +165,7 @@ p {
 	background-image: var(--gradient-primary);
 	width: 100%;
 	z-index: 999;
+	transition: 1s;
 }
 
 .nav-box {

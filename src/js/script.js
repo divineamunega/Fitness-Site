@@ -25,14 +25,16 @@ class Person {
 class App {
 	account = JSON.parse(localStorage.getItem("account"));
 	constructor() {
+		console.log(this.account);
 		// if (localStorage.getItem("hasModalOpen")) this.#openModal();
 		// localStorage.setItem("hasModalOpen", JSON.stringify(hasModalOpen));
 
 		btnsSubmit.addEventListener(`click`, this.#submitDetails.bind(this));
-		// greeting.textContent = `Hello ` + this.account.name;
 		if (!localStorage.getItem("hasModalOpen")) {
 			localStorage.setItem("hasModalOpen", JSON.stringify(true));
 			this.#openModal();
+		} else {
+			greeting.textContent = `Hello ` + this.account.name;
 		}
 
 		openNav.addEventListener(`click`, this.#openNav);
@@ -55,6 +57,7 @@ class App {
 		this.account = new Person(name, age, bmi);
 		localStorage.setItem("account", JSON.stringify(this.account));
 		this.#closeModal();
+		greeting.textContent = `Hello ` + this.account.name;
 	}
 
 	#openNav() {
