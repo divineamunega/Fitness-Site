@@ -1,0 +1,51 @@
+{
+	"workouts": [
+		{
+			"bmi_range": {
+				"from": 0,
+				"to": 18.5
+			},
+			"workout": "Yoga",
+			"image_url": "https://www.verywellfit.com/thmb/0Ql6ZnX8wW0fJy7Ujg4gQOY1vZc=/1500x1000/filters:no_upscale():max_bytes(150000):strip_icc()/yoga-for-weight-gain-4684428-v2-5c3a6f7ec9e77c0001d4a6a2.jpg"
+		},
+		{
+			"bmi_range": {
+				"from": 0,
+				"to": 18.5
+			},
+			"workout": "Pilates",
+			"image_url": "https://www.verywellfit.com/thmb/7qS4LzXxVw9rFpMjKqyHmYs3QoE=/1500x1000/filters:no_upscale():max_bytes(150000):strip_icc()/pilates-for-weight-gain-4684430-v2-5c3a6f7ec9e77c0001d4a6a2.jpg"
+		},
+		{
+			"bmi_range": {
+				"from": 0,
+				"to": 18.5
+			},
+			"workout": "Resistance training",
+			"image_url": "https://www.verywellfit.com/thmb/8tTnGmRZBkVlK8iJLqFkOQwXlZo=/1500x1000/filters:no_upscale():max_bytes(150000):strip_icc()/resistance-training-for-weight-gain-4684432-v2-5c3a6f7ec9e77c0001d4a6a2.jpg"
+		},
+		{
+			"bmi_range": {
+				"from": 18.5,
+				"to": 24.9
+			},
+			"workout": "Jogging/running",
+			"image_url": "https://www.verywellfit.com/thmb/8tTnGmRZBkVlK8iJLqFkOQwXlZo=/1500x1000/filters:no_upscale():max_bytes(150000):strip_icc()/resistance-training-for-weight-gain-4684432-v2-5c3a6f7ec9e77c0001d4a6a2.jpg"
+		},
+		{
+			"bmi_range": {
+				"from": 18.5,
+				"to": 24.9
+			},
+			"workout": "Swimming laps",
+			"image_url": "https://www.verywellfit.com/thmb/8tTnGmRZBkVlK8iJLqFkOQwXlZo=/1500x1000/filters:no_upscale():max_bytes(150000):strip_icc()/resistance-training-for-weight-gain-4684432-v2-5c3a6f7ec9e77c0001d4a6a2.jpg"
+		},
+		{
+			"bmi_range": {
+				"from": 18.5,
+				"to": 24.9
+			},
+			"workout": "Rollerblading/inline skating at a brisk pace"
+		}
+	]
+}

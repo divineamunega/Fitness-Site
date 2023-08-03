@@ -24,6 +24,7 @@ class Person {
 }
 class App {
 	account = JSON.parse(localStorage.getItem("account"));
+	workouts;
 	constructor() {
 		console.log(this.account);
 		// if (localStorage.getItem("hasModalOpen")) this.#openModal();
@@ -34,7 +35,9 @@ class App {
 			localStorage.setItem("hasModalOpen", JSON.stringify(true));
 			this.#openModal();
 		} else {
+			// Loading the workouts from local storage
 			greeting.textContent = `Hello ` + this.account.name;
+			this.workouts = this.#fetchWorkouts();
 		}
 
 		openNav.addEventListener(`click`, this.#openNav);
@@ -58,16 +61,12 @@ class App {
 		localStorage.setItem("account", JSON.stringify(this.account));
 		this.#closeModal();
 		greeting.textContent = `Hello ` + this.account.name;
+		workouts = this.#fetchWorkouts();
 	}
 
 	#openNav() {
 		openNav.classList.toggle(`close`);
 		navBar.classList.toggle(`hidden`);
-
-		document.addEventListener(`wheel`, function (e) {
-			e.preventDefault();
-			e.stopPropagation();
-		});
 	}
 
 	#enableScrolling() {
@@ -80,5 +79,39 @@ class App {
 		document.body.style.overflow = "hidden";
 		document.documentElement.style.overflow = "hidden";
 	}
+
+	// Function to fetch workouts for people with BMI values between 20 and 24.9
+	async #fetchWorkouts() {
+		try {
+			const response = await fetch("../src/json/workouts.json"); // Replace 'workouts.json' with the actual path to your JSON file
+			if (!response.ok) {
+				throw new Error("Network response was not ok");
+			}
+
+			const data = await response.json();
+			console.log(data);
+
+			// Filter workouts for people with BMI values between 20 and 24.9
+			const workoutsInRange = data.workouts.filter((workout) => {
+				return (
+					this.account.bmi > workout.bmi_range.from &&
+					this.account.bmi < workout.bmi_range.to
+				);
+			});
+
+			// Check if there are any workouts in the range
+			if (workoutsInRange.length === 0) {
+				console.log(
+					"No workouts available for people with BMI values between 20 and 24.9"
+				);
+			} else {
+				// Do something with the filtered workouts
+				console.log(workoutsInRange);
+			}
+		} catch (error) {
+			console.error("Error fetching workouts:", error);
+		}
+	}
 }
+
 const app = new App();
