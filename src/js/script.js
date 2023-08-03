@@ -132,5 +132,3 @@ const observer = new IntersectionObserver(([observer]) => {
 	}
 });
 observer.observe(header);
-
-console.log(observer);
