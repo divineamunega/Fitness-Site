@@ -6,7 +6,7 @@
 				"to": 18.5
 			},
 			"diet": "High-calorie foods",
-			"image_url": ""
+			"image_url": "https://images.unsplash.com/photo-1556710986-4a70434a76c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
 		},
 		{
 			"bmi_range": {
@@ -14,7 +14,7 @@
 				"to": 24.9
 			},
 			"diet": "Balanced diet",
-			"image_url": ""
+			"image_url": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80"
 		},
 		{
 			"bmi_range": {
@@ -22,7 +22,7 @@
 				"to": 29.9
 			},
 			"diet": "Low-fat foods",
-			"image_url": ""
+			"image_url": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
 		}
 	]
 }
