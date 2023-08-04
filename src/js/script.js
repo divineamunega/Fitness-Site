@@ -174,9 +174,10 @@ class App {
 
 							if (typeof workouts === "object") {
 								workouts.forEach((workout) => {
+									console.log(workout);
 									htmlBodyModal = `				
 						<div class="workout">
-							<div class="img-cont"><img src="${workout.img_url}" alt="A person ${workout.workout}" /></div>
+							<div class="img-cont"><img src="${workout.image_url}" alt="A person ${workout.workout}" /></div>
 							<div class="workout_name">${workout.workout}</div>
 						</div>
 					`;
@@ -211,7 +212,7 @@ class App {
 								diets.forEach((diet) => {
 									htmlBodyModal = `				
 						<div class="workout">
-							<div class="img-cont"><img src = "${diet.img_url}" alt="A person ${diet.diet}" /></div>
+							<div class="img-cont"><img src = "${diet.image_url}" alt="A person ${diet.diet}" /></div>
 							<div class="workout_name">${diet.diet}</div>
 						</div>
 					`;
@@ -243,7 +244,7 @@ class App {
 								resources.resources.forEach((resource, i) => {
 									htmlBodyModal = `				
 						<div class="workout">
-							<div class="img-cont"><img src = "${resource.img_url}" alt="${resource.title}" /></div>
+							<div class="img-cont"><img src = "${resource.image}" alt="${resource.title}" /></div>
 							<a class="workout_name link href="${resource.link}">${resource.title}</a>
 						</div>
 					`;
