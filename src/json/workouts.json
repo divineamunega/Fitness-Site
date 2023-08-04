@@ -73,7 +73,7 @@
 				"to": 29.9
 			},
 			"workout": "HIIT",
-			"image_url": ""
+			"image_url": "https://images.unsplash.com/photo-1616279969856-759f316a5ac1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=465&q=80"
 		},
 		{
 			"bmi_range": {
@@ -81,7 +81,7 @@
 				"to": null
 			},
 			"workout": "Walking",
-			"image_url": ""
+			"image_url": "https://images.unsplash.com/photo-1596247825134-b51b977ec0a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
 		},
 		{
 			"bmi_range": {
@@ -89,7 +89,7 @@
 				"to": null
 			},
 			"workout": "Water aerobics",
-			"image_url": ""
+			"image_url": "https://images.unsplash.com/photo-1582752452509-1f278716bace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
 		},
 		{
 			"bmi_range": {
@@ -97,7 +97,7 @@
 				"to": null
 			},
 			"workout": "Strength training",
-			"image_url": ""
+			"image_url": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
 		}
 	]
 }
