@@ -430,8 +430,8 @@ p {
 	font-family: var(--sub-font);
 	text-align: center;
 }
-.footer ul li a:hover{
-  color: #e16521;
+.footer ul li a:hover {
+	color: #e16521;
 }
 
 @media only screen and (max-width: 576px) {
@@ -456,28 +456,28 @@ p {
 		width: 20px;
 		height: 20px;
 	}
-  .footer .d-flex h1{
-    font-size: 6rem !important;
-  }
-  .footer .info h1{
-    font-size: 3rem !important;
-  }
-  .footer .info p{
-    font-size: 2rem !important;
-  }
-  .footer{
-    margin-bottom: 50px !important;
-  }
-  .appointment-area .appointment-left{
-    margin-top: -100px;
-  }
-  .appointment-area .appointment-left h1{
-    font-size: 4rem !important;
-  }
-  .appointment-area .appointment-left p, .appointment-area .appointment-left .time-list li{
-    font-size: 2.5rem !important;
-  }
-
+	.footer .d-flex h1 {
+		font-size: 6rem !important;
+	}
+	.footer .info h1 {
+		font-size: 3rem !important;
+	}
+	.footer .info p {
+		font-size: 2rem !important;
+	}
+	.footer {
+		margin-bottom: 50px !important;
+	}
+	.appointment-area .appointment-left {
+		margin-top: -100px;
+	}
+	.appointment-area .appointment-left h1 {
+		font-size: 4rem !important;
+	}
+	.appointment-area .appointment-left p,
+	.appointment-area .appointment-left .time-list li {
+		font-size: 2.5rem !important;
+	}
 }
 
 @media only screen and (max-width: 991px) {
@@ -533,7 +533,7 @@ p {
 	color: var(--color-white);
 	margin-bottom: 20px;
 	padding-bottom: 20px;
-  font-family: var(--text-font);
+	font-family: var(--text-font);
 }
 .appointment-area .appointment-right {
 	margin: -20px 0;
@@ -548,20 +548,20 @@ p {
 .appointment-area .appointment-right .form-wrap {
 	padding: 30px 40px 50px;
 }
-.appointment-area .appointment-right .form-wrap h3{
+.appointment-area .appointment-right .form-wrap h3 {
 	font-size: 3rem;
-  margin: 30px 0px;
+	margin: 30px 0px;
 }
 @media (max-width: 413px) {
 	.appointment-area .appointment-right .form-wrap {
 		padding: 0px 10px !important;
 	}
-  .appointment-area .appointment-right{
-    margin: -40px 0px 0px;
-  }
-  .appointment-area{
-    padding: 10px 0px 0px !important;
-  }
+	.appointment-area .appointment-right {
+		margin: -40px 0px 0px;
+	}
+	.appointment-area {
+		padding: 10px 0px 0px !important;
+	}
 }
 @media (max-width: 420px) {
 	.appointment-area .appointment-right .form-wrap .confirm_btn_box {
@@ -575,7 +575,7 @@ p {
 	color: var(--color-white);
 	font-size: 1.5rem;
 	font-family: var(--text-font);
-  border: none;
+	border: none;
 }
 .appointment-area .appointment-right .form-wrap .form-control {
 	margin-bottom: 10px;
@@ -583,11 +583,11 @@ p {
 	padding: 0.675rem 0.75rem;
 	font-size: 13px;
 	font-weight: 300;
-  border: 1px solid black;
+	border: 1px solid black;
 }
 .appointment-area .appointment-right .form-wrap .form-control:focus {
 	box-shadow: none;
-  border: 1px solid #e16521;
+	border: 1px solid #e16521;
 }
 .appointment-area .appointment-right .form-wrap {
 	border: 1px solid #e16521;
@@ -612,7 +612,7 @@ p {
 	padding: 0.675rem 0.75rem;
 	font-size: 13px;
 	font-weight: 300;
-  border: 1px solid black;
+	border: 1px solid black;
 }
 .appointment-area .appointment-right .form-wrap textarea:focus {
 	border: 1px solid #e16521;
@@ -667,9 +667,9 @@ p {
 		width: 20px;
 		height: 20px;
 	}
-  .modal-category{
-    width: 75rem;
-  }
+	.modal-category {
+		width: 75rem;
+	}
 }
 
 @media only screen and (max-width: 991px) {
@@ -762,7 +762,7 @@ p {
 }
 .workout .img-cont {
 	/* background-image: linear-gradient(-45deg, #ffffff, #232119be); */
-	width: 11rem;
+	width: 12rem;
 	animation-name: loadImage;
 	animation-duration: 0.5s;
 	animation-iteration-count: infinite;
