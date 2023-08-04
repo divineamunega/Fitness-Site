@@ -14,7 +14,8 @@ const openNav = document.querySelector(`.nav-open-button`);
 const navBar = document.querySelector(`.nav`);
 const showModal = document.querySelectorAll(`.show-modal`);
 const modalBody = document.querySelector(`.modal-body`);
-
+const modalClose = document.querySelector(`.modal-close`);
+const modalCatText = document.querySelector(`.modal-cat-text`);
 const modalCategory = document.querySelector(`.modal-category`);
 
 // App class
@@ -46,6 +47,7 @@ class App {
 		openNav.addEventListener(`click`, this.#openNav);
 
 		showModal.forEach(this.#showModal);
+		modalClose.addEventListener(`click`, this.#closeModalCat);
 	}
 
 	#openModal = () => {
@@ -66,6 +68,11 @@ class App {
 		localStorage.setItem("account", JSON.stringify(this.account));
 		this.#closeModal();
 		greeting.textContent = `Hello ` + this.account.name;
+	}
+
+	#closeModalCat() {
+		modalCategory.classList.add(`hidden`);
+		overlay.classList.add(`hidden`);
 	}
 
 	#openNav() {
@@ -161,6 +168,11 @@ class App {
 					`;
 
 									modalBody.insertAdjacentHTML(`afterbegin`, htmlBodyModal);
+
+									modalCatText.innerHTML = `👋 ${
+										name.split(` `)[0]
+									} here are your
+			<span class="highlight activity">workouts</span>`;
 								});
 							} else {
 								htmlBodyModal = `<div class="message">
@@ -189,6 +201,10 @@ class App {
 							<div class="workout_name">${diet.diet}</div>
 						</div>
 					`;
+									modalCatText.innerHTML = `👋 ${
+										name.split(` `)[0]
+									} here are your
+										<span class="highlight activity">diets</span>`;
 									modalBody.insertAdjacentHTML(`afterbegin`, htmlBodyModal);
 								});
 							} else {
@@ -259,7 +275,9 @@ class ContinuousScrollingTicker {
 			const tickerContent = `Current Date/Time: ${dateTime} | Location: ${locationString}`;
 			this.tickerContentElement.textContent = tickerContent;
 		} catch (error) {
-			this.tickerContentElement.textContent = `Error: ` + error.message;
+			const dateTime = await this.getCurrentDateTime();
+			this.tickerContentElement.textContent =
+				`${dateTime} Error: ` + error.message;
 		}
 	}
 }
