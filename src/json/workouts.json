@@ -1,0 +1,103 @@
+{
+	"workouts": [
+		{
+			"bmi_range": {
+				"from": 0,
+				"to": 18.5
+			},
+			"workout": "Yoga",
+			"image_url": ""
+		},
+		{
+			"bmi_range": {
+				"from": 0,
+				"to": 18.5
+			},
+			"workout": "Pilates",
+			"image_url": ""
+		},
+		{
+			"bmi_range": {
+				"from": 0,
+				"to": 18.5
+			},
+			"workout": "Resistance training",
+			"image_url": ""
+		},
+		{
+			"bmi_range": {
+				"from": 18.5,
+				"to": 24.9
+			},
+			"workout": "Jogging/running",
+			"image_url": ""
+		},
+
+		{
+			"bmi_range": {
+				"from": 18.5,
+				"to": 24.9
+			},
+			"workout": "Swimming laps",
+			"image_url": ""
+		},
+
+		{
+			"bmi_range": {
+				"from": 18.5,
+				"to": 24.9
+			},
+			"workout": "Rollerblading/inline skating at a brisk pace",
+			"image_url": ""
+		},
+
+		{
+			"bmi_range": {
+				"from": 24.9,
+				"to": 29.9
+			},
+			"workout": "Cycling",
+			"image_url": ""
+		},
+		{
+			"bmi_range": {
+				"from": 24.9,
+				"to": 29.9
+			},
+			"workout": "Zumba",
+			"image_url": ""
+		},
+		{
+			"bmi_range": {
+				"from": 24.9,
+				"to": 29.9
+			},
+			"workout": "HIIT",
+			"image_url": ""
+		},
+		{
+			"bmi_range": {
+				"from": 30,
+				"to": null
+			},
+			"workout": "Walking",
+			"image_url": ""
+		},
+		{
+			"bmi_range": {
+				"from": 30,
+				"to": null
+			},
+			"workout": "Water aerobics",
+			"image_url": ""
+		},
+		{
+			"bmi_range": {
+				"from": 30,
+				"to": null
+			},
+			"workout": "Strength training",
+			"image_url": ""
+		}
+	]
+}
