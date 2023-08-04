@@ -44,13 +44,13 @@
 						<a href="#">Home</a>
 					</li>
 					<li class="link">
-						<a href="#">Pages</a>
+						<a href="#">About Us</a>
 					</li>
 					<li class="link">
-						<a href="#"> Descriptipon </a>
+						<a href="#"> Procedure</a>
 					</li>
 					<li class="link">
-						<a href="#"> Workouts </a>
+						<a href="#"> Testimonials </a>
 					</li>
 				</ul>
 			</div>
@@ -143,24 +143,10 @@
 					<div class="col-lg-4 col-md-6 mx-auto">
 						<div class="categories-post my-4">
 							<img src="/design/category.webp" class="w-100" alt="" />
-							<div class="categories-details">
+							<div class="categories-details show-modal fitness">
 								<div class="categories-text">
 									<div class="border-line"></div>
-									<button class="show-modal">FITNESS</button>
-									<div class="modal hidden">
-										<button class="close-modal">&times;</button>
-										<h1>I'm a modal window 😍</h1>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-											sed do eiusmod tempor incididunt ut labore et dolore magna
-											aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-											ullamco laboris nisi ut aliquip ex ea commodo consequat.
-											Duis aute irure dolor in reprehenderit in voluptate velit
-											esse cillum dolore eu fugiat nulla pariatur. Excepteur
-											sint occaecat cupidatat non proident, sunt in culpa qui
-											officia deserunt mollit anim id est laborum.
-										</p>
-									</div>
+									<a class="" style="color: white">FITNESS</a>
 									<div class="border-line"></div>
 								</div>
 							</div>
@@ -169,10 +155,10 @@
 					<div class="col-lg-4 col-md-6 mx-auto">
 						<div class="categories-post my-4">
 							<img src="/design/diet-category.jpg" class="w-100" alt="" />
-							<div class="categories-details">
+							<div class="categories-details show-modal diet">
 								<div class="categories-text">
 									<div class="border-line"></div>
-									<a href=""><h5>Diet Plan</h5></a>
+									<a class="">Diet Plan</a>
 									<div class="border-line"></div>
 								</div>
 							</div>
@@ -181,16 +167,38 @@
 					<div class="col-lg-4 col-md-6 mx-auto">
 						<div class="categories-post my-4">
 							<img src="/design/resources-category.jpg" class="w-100" alt="" />
-							<div class="categories-details">
+							<div class="categories-details show-modal resources">
 								<div class="categories-text">
 									<div class="border-line"></div>
-									<a href=""><h5>Resources</h5></a>
+									<a class="">Resources</a>
 									<div class="border-line"></div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="modal-category hidden">
+			<div class="modal-close">&times;</div>
+			<div class="modal_head">
+				<h2 class="modal-cat-text">
+					👋 Divine here are your
+					<span class="highlight activity">workouts</span>
+				</h2>
+			</div>
+			<div class="modal-body">
+				<!-- 				
+				<div class="workout">
+					<div class="img-cont"><img src"" alt="" /></div>
+					<div class="workout_name">🚴 Cycling</div>
+				</div>
+				<div class="workout"></div> -->
+
+				<!-- <div class="message">
+					💥 Could Not Get workouts.. Check your internet Connection
+				</div> -->
+				<div class="loading hidden"></div>
 			</div>
 		</div>
 
@@ -243,7 +251,7 @@
 							<div class="d-flex align-items-center mt-4">
 								<div class="client">
 									<img
-										src="/design/about-us.webp"
+										src="/design/customer-1.jpg"
 										class="img-fluid"
 										alt=""
 										style="width: 80px; height: 80px; border-radius: 50%"
@@ -295,19 +303,12 @@
 								quo animi neque itaque quis quaerat ipsam?
 							</p>
 							<div class="d-flex align-items-center">
-								<div
-									class="client"
-									style="
-										width: 80px;
-										height: 80px;
-										border-radius: 50%;
-										background-color: red;
-									"
-								>
+								<div class="client">
 									<img
-										src="./static/images/team/team-01.jpg"
+										src="/design/customer-2.jpg"
 										class="img-fluid"
 										alt=""
+										style="width: 80px; height: 80px; border-radius: 50%"
 									/>
 								</div>
 								<div class="d-block ms-3">
@@ -401,18 +402,181 @@
 			</div>
 		</div>
 
-		<div class="container-fluid">
+		<section class="appointment-area py-5">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-3">
+				<div
+					class="row justify-content-center align-items-center appointment-wrap"
+				>
+					<div class="col-lg-5 col-md-6 appointment-left">
+						<h1>Servicing Hours</h1>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+							iure maiores beatae, magni ullam id reiciendis nulla illo? Omnis.
+						</p>
+						<ul class="time-list">
+							<li class="d-flex justify-content-between">
+								<span>Monday - Friday</span>
+								<span>08.00 am to 10.00 pm</span>
+							</li>
+							<li class="d-flex justify-content-between">
+								<span>Monday - Friday</span>
+								<span>08.00 am to 10.00 pm</span>
+							</li>
+							<li class="d-flex justify-content-between">
+								<span>Sunday</span>
+								<span>08.00 am to 10.00 pm</span>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-6 col-md-6 pt-60 pb-60">
+						<div class="appointment-right">
+							<form action="#" class="form-wrap">
+								<h3 class="pb-20 text-center mb-20">Book an Appointment</h3>
+								<input
+									type="text"
+									class="form-control"
+									name="name"
+									placeholder="Patient Name"
+									onfocus="this.placeholder = ''"
+									onblur="this.placeholder = 'Patient Name'"
+								/>
+								<input
+									type="text"
+									class="form-control"
+									name="phone"
+									placeholder="Phone"
+									onfocus="this.placeholder = ''"
+									onblur="this.placeholder = 'Phone'"
+								/>
+								<input
+									type="email"
+									class="form-control"
+									name="email"
+									placeholder="Email Address"
+									onfocus="this.placeholder = ''"
+									onblur="this.placeholder = 'Email Address'"
+								/>
+								<input
+									id="datepicker1"
+									name="dop"
+									class="dates form-control"
+									placeholder="Date of Birth"
+									type="text"
+								/>
+								<input
+									id="datepicker2"
+									class="dates form-control"
+									placeholder="appointment Date"
+									type="text"
+								/>
+								<textarea
+									name="messege"
+									class=""
+									rows="5"
+									placeholder="Messege"
+									onfocus="this.placeholder = ''"
+									onblur="this.placeholder = 'Messege'"
+								></textarea>
+								<div class="text-center confirm_btn_box">
+									<button class="main_btn text-uppercase">
+										Confirm Booking
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="container-fluid footer bg-dark py-5">
+			<div class="container my-5">
+				<div class="row gx-5">
+					<div class="col-md-3 col-6">
 						<div class="">
-							<p>OUR COMAPNY</p>
+							<div class="d-flex mb-5">
+								<img src="/design/logo.png" alt="" class="" />
+								<h1 class="text-white ms-3 fs-1">Fit4Life</h1>
+							</div>
+							<p class="fs-4">
+								Despite growth of the Internet over the past seven years, the
+								use of toll-free phone numbers in television advertising
+								continues.
+							</p>
+							<h1 class="fs-2 mt-4">FOLLOW US</h1>
+							<div class="d-flex my-4">
+								<div class="media">
+									<a href=""><i class="bi bi-facebook"></i></a>
+								</div>
+								<div class="media">
+									<a href=""><i class="bi bi-twitter"></i></a>
+								</div>
+								<div class="media">
+									<a href=""><i class="bi bi-google"></i></a>
+								</div>
+								<div class="media">
+									<a href=""><i class="bi bi-linkedin"></i></a>
+								</div>
+								<div class="media">
+									<a href=""><i class="bi bi-instagram"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-6">
+						<div class="text-center my-5 my-sm-0">
+							<h1 class="mb-5">OUR COMPANY</h1>
 							<ul>
-								<li>About Us</li>
-								<li>Category</li>
-								<li>Our Relevance</li>
-								<li>Contact Us</li>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Category</a></li>
+								<li><a href="#">Testimonials</a></li>
+								<li><a href="#">Site Map</a></li>
 							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 col-6">
+						<div class="text-center my-5 my-sm-0">
+							<h1 class="mb-5">OUR COMPANY</h1>
+							<ul>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Category</a></li>
+								<li><a href="#">Testimonials</a></li>
+								<li><a href="#">Site Map</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 col-6">
+						<div class="#">
+							<h1 class="mb-5 text-center mb-5">GET INFO</h1>
+							<div
+								class="my-3 d-flex justify-content-center align-items-center"
+							>
+								<a href=""><i class="bi bi-linkedin fs-1"></i></a>
+								<div class="d-block ms-3">
+									<h1 class="fs-3">Phone:</h1>
+									<p class="fs-4">(+234) 8087654321</p>
+								</div>
+							</div>
+							<div
+								class="my-3 d-flex justify-content-center align-items-center"
+							>
+								<a href=""><i class="bi bi-linkedin fs-1"></i></a>
+								<div class="d-block ms-4">
+									<h1 class="fs-3">Email:</h1>
+									<p class="fs-4">fit4life@gmail.com</p>
+								</div>
+							</div>
+							<div
+								class="my-3 d-flex justify-content-center align-items-center"
+							>
+								<a href=""><i class="bi bi-linkedin fs-1"></i></a>
+								<div class="d-block ms-3">
+									<h1 class="fs-3">Phone:</h1>
+									<p class="fs-4">(+234) 8087654321</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -420,6 +584,10 @@
 		</div>
 
 		<p class="back2Top"><i class="bi bi-caret-up-square-fill"></i></p>
+
+		<div class="ticker-container">
+			<div id="ticker-content"></div>
+		</div>
 
 		<script src="./js/script.js"></script>
 		<script src="./js/bootstrap.bundle.min.js"></script>
