@@ -31,7 +31,6 @@ class App {
 	account = JSON.parse(localStorage.getItem("account"));
 	workouts;
 	constructor() {
-		console.log(this.account);
 		// if (localStorage.getItem("hasModalOpen")) this.#openModal();
 		// localStorage.setItem("hasModalOpen", JSON.stringify(hasModalOpen));
 
@@ -145,7 +144,6 @@ class App {
 			}
 
 			const data = await response.json();
-			console.log(data);
 
 			return data;
 		} catch (err) {
@@ -178,7 +176,7 @@ class App {
 								workouts.forEach((workout) => {
 									htmlBodyModal = `				
 						<div class="workout">
-							<div class="img-cont"><img src"${workout.img_url}" alt="A person ${workout.workout}" /></div>
+							<div class="img-cont"><img src="${workout.img_url}" alt="A person ${workout.workout}" /></div>
 							<div class="workout_name">${workout.workout}</div>
 						</div>
 					`;
@@ -213,7 +211,7 @@ class App {
 								diets.forEach((diet) => {
 									htmlBodyModal = `				
 						<div class="workout">
-							<div class="img-cont"><img src"${diet.img_url}" alt="A person ${diet.diet}" /></div>
+							<div class="img-cont"><img src = "${diet.img_url}" alt="A person ${diet.diet}" /></div>
 							<div class="workout_name">${diet.diet}</div>
 						</div>
 					`;
@@ -240,14 +238,12 @@ class App {
 					(async () => {
 						try {
 							resources = await this.#fetchResources();
-							console.log(resources);
+
 							if (typeof resources === "object") {
 								resources.resources.forEach((resource, i) => {
-									console.log(i);
-									console.log(resource);
 									htmlBodyModal = `				
 						<div class="workout">
-							<div class="img-cont"><img src"${resource.img_url}" alt="${resource.title}" /></div>
+							<div class="img-cont"><img src = "${resource.img_url}" alt="${resource.title}" /></div>
 							<a class="workout_name link href="${resource.link}">${resource.title}</a>
 						</div>
 					`;
