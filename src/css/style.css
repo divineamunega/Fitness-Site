@@ -179,8 +179,8 @@ p {
 	list-style: none;
 }
 .nav-box li {
-	/* width: 2rem; */
-	font-size: 3rem;
+	width: 30rem;
+	font-size: 2rem;
 	margin-bottom: 4rem;
 	font-weight: 700;
 	font-family: var(--text-font);
@@ -222,8 +222,6 @@ p {
 }
 
 .nav-open-button.close div:nth-child(2) {
-	/* visibility: hidden; */
-	/* display: none; */
 	opacity: 0;
 }
 
@@ -235,7 +233,7 @@ p {
 .landing-page {
 	width: 100%;
 	height: 100vh;
-	background-image: url(/design/background.jpg);
+	background-image: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/design/background.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -254,6 +252,10 @@ p {
 	display: inline-block;
 	margin: 3rem 0rem;
 	font-family: var(--text-font);
+  font-size: 1.8rem;
+}
+.landing-page a:hover{
+  color: var(--color-white);
 }
 .landing-page span {
 	font-size: 24px;
@@ -282,8 +284,8 @@ p {
 	background-color: #151515;
 }
 .about-us .img {
-	background-image: url(/design/about-us2.webp);
-	background-position: center;
+	background-image: url(/design/about-us2.jpg);
+	background-position: top;
 	background-size: cover;
 	height: 60rem;
 }
@@ -537,8 +539,7 @@ p {
 }
 .appointment-area .appointment-right {
 	margin: -20px 0;
-	background-color: white;
-	box-shadow: 0px 10px 20px 0px rgba(153, 153, 153, 0.1);
+	/* box-shadow: 0px 10px 20px 0px rgba(153, 153, 153, 0.1); */
 }
 @media (max-width: 767px) {
 	.appointment-area .appointment-right {
@@ -583,11 +584,15 @@ p {
 	padding: 0.675rem 0.75rem;
 	font-size: 13px;
 	font-weight: 300;
-  border: 1px solid black;
+  border: none !important;
+  background: transparent !important;
+  color: var(--color-white);
+  font-size: 1.8rem;
+  font-family: var(--text-font);
 }
 .appointment-area .appointment-right .form-wrap .form-control:focus {
 	box-shadow: none;
-  border: 1px solid #e16521;
+  border: 1px solid #e16521 !important;
 }
 .appointment-area .appointment-right .form-wrap {
 	border: 1px solid #e16521;
@@ -607,16 +612,25 @@ p {
 }
 .appointment-area .appointment-right .form-wrap textarea {
 	width: 100%;
-	border: 1px solid #ced4da;
 	margin-bottom: 20px;
 	padding: 0.675rem 0.75rem;
-	font-size: 13px;
+	font-size: 1.8rem;
 	font-weight: 300;
-  border: 1px solid black;
+  border: none !important;
+  background-color: transparent !important;
+  color: var(--color-white);
+  font-family: var(--text-font);
 }
 .appointment-area .appointment-right .form-wrap textarea:focus {
-	border: 1px solid #e16521;
+	border: 1px solid #e16521 !important;
 	outline: none;
+}
+.footer{
+  background-image: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(/design/footer.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px 0px;
 }
 .footer .media {
 	width: 40px;
