@@ -116,7 +116,6 @@ class App {
 			}
 
 			const data = await response.json();
-			console.log(data);
 
 			// Filter diets for people with BMI values between 20 and 24.9
 			const dietsInRange = data.diets.filter((diet) => {
@@ -134,6 +133,23 @@ class App {
 			}
 		} catch (error) {
 			return error.message;
+		}
+	}
+
+	async #fetchResources() {
+		try {
+			const response = await fetch(`./json/resources.json`);
+
+			if (!response.ok) {
+				throw new Error("Could Not get resources.");
+			}
+
+			const data = await response.json();
+			console.log(data);
+
+			return data;
+		} catch (err) {
+			return err.message;
 		}
 	}
 
@@ -215,6 +231,41 @@ class App {
 							}
 						} catch (err) {
 							diets = err.message;
+						}
+					})();
+				}
+
+				if (btn.classList.contains(`resources`)) {
+					let resources;
+					(async () => {
+						try {
+							resources = await this.#fetchResources();
+							console.log(resources);
+							if (typeof resources === "object") {
+								resources.resources.forEach((resource, i) => {
+									console.log(i);
+									console.log(resource);
+									htmlBodyModal = `				
+						<div class="workout">
+							<div class="img-cont"><img src"${resource.img_url}" alt="${resource.title}" /></div>
+							<a class="workout_name link href="${resource.link}">${resource.title}</a>
+						</div>
+					`;
+
+									modalCatText.innerHTML = `👋 ${
+										name.split(` `)[0]
+									} here are your
+										<span class="highlight activity">resources</span>`;
+									modalBody.insertAdjacentHTML(`afterbegin`, htmlBodyModal);
+								});
+							} else {
+								htmlBodyModal = `<div class="message">
+						💥 Could Not Get resources.. ${diets}
+					</div>`;
+								modalBody.insertAdjacentHTML(`beforeend`, htmlBodyModal);
+							}
+						} catch (err) {
+							resources = err.message;
 						}
 					})();
 				}
