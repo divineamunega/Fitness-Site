@@ -13,6 +13,9 @@ const greeting = document.querySelector(`.greeting`);
 const openNav = document.querySelector(`.nav-open-button`);
 const navBar = document.querySelector(`.nav`);
 const showModal = document.querySelectorAll(`.show-modal`);
+const modalBody = document.querySelector(`.modal-body`);
+
+const modalCategory = document.querySelector(`.modal-category`);
 
 // App class
 
@@ -42,7 +45,7 @@ class App {
 
 		openNav.addEventListener(`click`, this.#openNav);
 
-		showModal.forEach(this.showModal);
+		showModal.forEach(this.#showModal);
 	}
 
 	#openModal = () => {
@@ -63,7 +66,6 @@ class App {
 		localStorage.setItem("account", JSON.stringify(this.account));
 		this.#closeModal();
 		greeting.textContent = `Hello ` + this.account.name;
-		workouts = this.#fetchWorkouts();
 	}
 
 	#openNav() {
@@ -71,9 +73,9 @@ class App {
 		navBar.classList.toggle(`hidden`);
 	}
 	// Function to fetch workouts for people with BMI values between 20 and 24.9
-	async #fetchWorkouts() {
+	async #fetchWorkouts(bmi) {
 		try {
-			const response = await fetch("../src/json/workouts.json"); // Replace 'workouts.json' with the actual path to your JSON file
+			const response = await fetch("./json/workouts.json"); // Replace 'workouts.json' with the actual path to your JSON file
 			if (!response.ok) {
 				throw new Error(
 					"Could Not get workouts.. Check your internet connection."
@@ -84,10 +86,7 @@ class App {
 
 			// Filter workouts for people with BMI values between 20 and 24.9
 			const workoutsInRange = data.workouts.filter((workout) => {
-				return (
-					this.account.bmi > workout.bmi_range.from &&
-					this.account.bmi < workout.bmi_range.to
-				);
+				return bmi > workout.bmi_range.from && bmi < workout.bmi_range.to;
 			});
 
 			// Check if there are any workouts in the range
@@ -101,7 +100,7 @@ class App {
 		}
 	}
 
-	async #fetchDiets() {
+	async #fetchDiets(bmi) {
 		try {
 			const response = await fetch("../src/json/diet.json");
 
@@ -113,15 +112,12 @@ class App {
 			console.log(data);
 
 			// Filter diets for people with BMI values between 20 and 24.9
-			const dietsInRange = data.workouts.filter((diet) => {
-				return (
-					this.account.bmi > workout.bmi_range.from &&
-					this.account.bmi < workout.bmi_range.to
-				);
+			const dietsInRange = data.diets.filter((diet) => {
+				return bmi > diet.bmi_range.from && bmi < diet.bmi_range.to;
 			});
 
 			// Check if there are any diets in the range
-			if (workoutsInRange.length === 0) {
+			if (dietsInRange.length === 0) {
 				throw new Error(
 					`No workouts available for people with BMI values below 0`
 				);
@@ -134,9 +130,80 @@ class App {
 		}
 	}
 
-	showModal = (btn) => {
-		if (btn.classList.contains(`fitness`)) {
-		}
+	#openCategoryModal() {
+		modalCategory.classList.remove(`hidden`);
+		overlay.classList.remove(`hidden`);
+	}
+
+	#showModal = (btn) => {
+		btn.addEventListener(
+			`click`,
+			function (e) {
+				this.#openCategoryModal();
+				let htmlBodyModal;
+				const name = this.account.name;
+				const bmi = this.account.bmi;
+				modalBody.innerHTML = "";
+				if (btn.classList.contains(`fitness`)) {
+					let workouts;
+
+					(async () => {
+						try {
+							workouts = await this.#fetchWorkouts(bmi);
+
+							if (typeof workouts === "object") {
+								workouts.forEach((workout) => {
+									htmlBodyModal = `				
+						<div class="workout">
+							<div class="img-cont"><img src"${workout.img_url}" alt="A person ${workout.workout}" /></div>
+							<div class="workout_name">${workout.workout}</div>
+						</div>
+					`;
+
+									modalBody.insertAdjacentHTML(`afterbegin`, htmlBodyModal);
+								});
+							} else {
+								htmlBodyModal = `<div class="message">
+						💥 Could Not Get workouts.. ${workouts}
+					</div>`;
+								modalBody.insertAdjacentHTML(`beforeend`, htmlBodyModal);
+							}
+						} catch (err) {
+							workouts = err.message;
+						}
+					})();
+				}
+
+				if (btn.classList.contains(`diet`)) {
+					let diets;
+					(async () => {
+						try {
+							diets = await this.#fetchDiets(bmi);
+							// const { diets } = data.json();
+
+							if (typeof diets === "object") {
+								diets.forEach((diet) => {
+									htmlBodyModal = `				
+						<div class="workout">
+							<div class="img-cont"><img src"${diet.img_url}" alt="A person ${diet.diet}" /></div>
+							<div class="workout_name">${diet.diet}</div>
+						</div>
+					`;
+									modalBody.insertAdjacentHTML(`afterbegin`, htmlBodyModal);
+								});
+							} else {
+								htmlBodyModal = `<div class="message">
+						💥 Could Not Get diets.. ${diets}
+					</div>`;
+								modalBody.insertAdjacentHTML(`beforeend`, htmlBodyModal);
+							}
+						} catch (err) {
+							diets = err.message;
+						}
+					})();
+				}
+			}.bind(this)
+		);
 	};
 }
 
@@ -158,3 +225,44 @@ const observer = new IntersectionObserver(([observer]) => {
 	}
 });
 observer.observe(header);
+
+class ContinuousScrollingTicker {
+	constructor() {
+		this.tickerContentElement = document.getElementById("ticker-content");
+		this.updateTickerContent();
+		setInterval(() => this.updateTickerContent(), 5000);
+	}
+
+	async getCurrentDateTime() {
+		const now = new Date();
+		return now.toLocaleString();
+	}
+
+	async getUserLocation() {
+		return new Promise((resolve, reject) => {
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(
+					(position) => resolve(position.coords),
+					(error) => reject(error)
+				);
+			} else {
+				reject(new Error("Geolocation is not supported by this browser."));
+			}
+		});
+	}
+
+	async updateTickerContent() {
+		try {
+			const dateTime = await this.getCurrentDateTime();
+			const location = await this.getUserLocation();
+			const locationString = `Lat: ${location.latitude}, Long: ${location.longitude}`;
+			const tickerContent = `Current Date/Time: ${dateTime} | Location: ${locationString}`;
+			this.tickerContentElement.textContent = tickerContent;
+		} catch (error) {
+			this.tickerContentElement.textContent = `Error: ` + error.message;
+		}
+	}
+}
+
+// Create an instance of the ContinuousScrollingTicker class
+const ticker = new ContinuousScrollingTicker();
