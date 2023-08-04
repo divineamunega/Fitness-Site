@@ -12,6 +12,7 @@ const bmiInput = document.querySelector(`.bmi-input`);
 const greeting = document.querySelector(`.greeting`);
 const openNav = document.querySelector(`.nav-open-button`);
 const navBar = document.querySelector(`.nav`);
+const showModal = document.querySelectorAll(`.show-modal`);
 
 // App class
 
@@ -40,6 +41,8 @@ class App {
 		}
 
 		openNav.addEventListener(`click`, this.#openNav);
+
+		showModal.forEach(this.showModal);
 	}
 
 	#openModal = () => {
@@ -67,28 +70,17 @@ class App {
 		openNav.classList.toggle(`close`);
 		navBar.classList.toggle(`hidden`);
 	}
-
-	#enableScrolling() {
-		document.body.style.overflow = "auto";
-		document.documentElement.style.overflow = "auto";
-	}
-
-	// To disable scrolling
-	#disableScrolling() {
-		document.body.style.overflow = "hidden";
-		document.documentElement.style.overflow = "hidden";
-	}
-
 	// Function to fetch workouts for people with BMI values between 20 and 24.9
 	async #fetchWorkouts() {
 		try {
 			const response = await fetch("../src/json/workouts.json"); // Replace 'workouts.json' with the actual path to your JSON file
 			if (!response.ok) {
-				throw new Error("Network response was not ok");
+				throw new Error(
+					"Could Not get workouts.. Check your internet connection."
+				);
 			}
 
 			const data = await response.json();
-			console.log(data);
 
 			// Filter workouts for people with BMI values between 20 and 24.9
 			const workoutsInRange = data.workouts.filter((workout) => {
@@ -100,17 +92,52 @@ class App {
 
 			// Check if there are any workouts in the range
 			if (workoutsInRange.length === 0) {
-				console.log(
-					"No workouts available for people with BMI values between 20 and 24.9"
+				throw new Error("Could not find workouts for your range.");
+			} else {
+				return workoutsInRange;
+			}
+		} catch (error) {
+			return error.message;
+		}
+	}
+
+	async #fetchDiets() {
+		try {
+			const response = await fetch("../src/json/diet.json");
+
+			if (!response.ok) {
+				throw new Error("Network response was not ok");
+			}
+
+			const data = await response.json();
+			console.log(data);
+
+			// Filter diets for people with BMI values between 20 and 24.9
+			const dietsInRange = data.workouts.filter((diet) => {
+				return (
+					this.account.bmi > workout.bmi_range.from &&
+					this.account.bmi < workout.bmi_range.to
+				);
+			});
+
+			// Check if there are any diets in the range
+			if (workoutsInRange.length === 0) {
+				throw new Error(
+					`No workouts available for people with BMI values below 0`
 				);
 			} else {
 				// Do something with the filtered workouts
-				console.log(workoutsInRange);
+				return dietsInRange;
 			}
 		} catch (error) {
-			console.error("Error fetching workouts:", error);
+			return error.message;
 		}
 	}
+
+	showModal = (btn) => {
+		if (btn.classList.contains(`fitness`)) {
+		}
+	};
 }
 
 const app = new App();
