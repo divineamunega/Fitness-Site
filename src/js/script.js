@@ -294,7 +294,7 @@ class ContinuousScrollingTicker {
 	constructor() {
 		this.tickerContentElement = document.getElementById("ticker-content");
 		this.updateTickerContent();
-		setInterval(() => this.updateTickerContent(), 5000);
+		setInterval(() => this.updateTickerContent(), 1000 * 60);
 	}
 
 	async getCurrentDateTime() {
@@ -317,15 +317,42 @@ class ContinuousScrollingTicker {
 
 	async updateTickerContent() {
 		try {
-			const dateTime = await this.getCurrentDateTime();
 			const location = await this.getUserLocation();
-			const locationString = `Lat: ${location.latitude}, Long: ${location.longitude}`;
-			const tickerContent = `Current Date/Time: ${dateTime} | Location: ${locationString}`;
-			this.tickerContentElement.textContent = tickerContent;
+
+			const locationString = await this.#getLocationStr(
+				location.latitude,
+				location.longitude
+			);
+
+			setInterval(async () => {
+				const dateTime = await this.getCurrentDateTime();
+				const tickerContent = `Current Date/Time: ${dateTime} | Location: ${locationString}`;
+				this.tickerContentElement.textContent = tickerContent;
+			}, 5000);
 		} catch (error) {
 			const dateTime = await this.getCurrentDateTime();
 			this.tickerContentElement.textContent =
 				`${dateTime} Error: ` + error.message;
+		}
+	}
+
+	async #getLocationStr(lat, lon) {
+		const url = `https://forward-reverse-geocoding.p.rapidapi.com/v1/reverse?lat=${lat}6&lon=${lon}&accept-language=en&polygon_threshold=0.0`;
+
+		const options = {
+			method: "GET",
+			headers: {
+				"X-RapidAPI-Key": "6fefec31a2msh37e747a16d3a8c7p1dc2c4jsnc95aa4fbb2e1",
+				"X-RapidAPI-Host": "forward-reverse-geocoding.p.rapidapi.com",
+			},
+		};
+
+		try {
+			const response = await fetch(url, options);
+			const data = await response.json();
+			return data.display_name;
+		} catch (err) {
+			return err.message;
 		}
 	}
 }
